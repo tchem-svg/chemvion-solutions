@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chemvion Solutions — Bioplastics Resin Distribution · Africa</title>
+<title>Chemvion Solutions — Bio-based &amp; Compostable Resins · Africa</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -14,23 +14,14 @@
   --paper:#faf7f1;--sand:#e7e1d6;--muted:#8a8d86;--light:#f4f1ea;
 }
 html{scroll-behavior:smooth}
-body{font-family:'Sora',system-ui,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;position:relative}
-/* grain overlay */
+body{font-family:'Sora',system-ui,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
 body::after{content:'';position:fixed;inset:0;background:url('grain-texture-256.jpg') repeat;opacity:.035;pointer-events:none;z-index:9999}
-.mono{font-family:'Space Mono',monospace}
 img{display:block;max-width:100%;height:auto}
 
-/* ─── NAV ─── */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;
-  padding:0 60px;height:72px;
-  display:flex;align-items:center;justify-content:space-between;
-  transition:background .35s,border-color .35s;
-  border-bottom:1px solid transparent;
-}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 60px;height:72px;display:flex;align-items:center;justify-content:space-between;transition:background .35s,border-color .35s;border-bottom:1px solid transparent}
 nav.scrolled{background:rgba(250,247,241,.97);backdrop-filter:blur(10px);border-color:var(--sand)}
-.nav-logo{display:flex;align-items:center;text-decoration:none}
-.nav-logo img{height:28px;width:auto;filter:brightness(0) invert(1);transition:filter .35s}
+.nav-logo img{height:28px;width:auto;filter:brightness(0) invert(1);transition:filter .35s;display:block}
 nav.scrolled .nav-logo img{filter:brightness(0)}
 .nav-links{display:flex;align-items:center;gap:36px;list-style:none}
 .nav-links a{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:rgba(244,241,234,.75);transition:color .2s}
@@ -39,22 +30,11 @@ nav.scrolled .nav-links a{color:var(--muted)}
 .nav-cta{background:var(--clay)!important;color:#fff!important;padding:10px 22px;transition:background .2s!important}
 .nav-cta:hover{background:#a84f25!important}
 
-/* ─── HERO ─── */
-.hero{
-  min-height:100vh;background:var(--ink);
-  position:relative;overflow:hidden;
-  display:flex;align-items:center;
-  padding:100px 60px 80px;gap:56px;
-}
-.hero-video{
-  position:absolute;inset:0;width:100%;height:100%;
-  object-fit:cover;opacity:.22;
-}
-.hero-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(105deg,rgba(31,42,36,.98) 38%,rgba(31,42,36,.55) 70%,rgba(31,42,36,.3) 100%);
-}
-.hero-content{position:relative;z-index:2;flex:1;max-width:640px}
+/* HERO */
+.hero{min-height:100vh;background:var(--ink);position:relative;overflow:hidden;display:flex;align-items:center;padding:100px 60px 80px;gap:56px}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(31,42,36,.98) 38%,rgba(31,42,36,.55) 70%,rgba(31,42,36,.3) 100%)}
+.hero-content{position:relative;z-index:2;flex:1;max-width:620px}
 .hero-label{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--clay);margin-bottom:28px}
 .hero-h1{font-size:clamp(50px,6.2vw,86px);font-weight:800;letter-spacing:-3px;line-height:.93;color:var(--light);margin-bottom:30px}
 .hero-h1 span{color:var(--forest)}
@@ -65,59 +45,35 @@ nav.scrolled .nav-links a{color:var(--muted)}
 .btn-primary:hover{background:#a84f25}
 .btn-ghost{border:1px solid rgba(244,241,234,.22);color:rgba(244,241,234,.65);padding:15px 34px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;display:inline-block;transition:border-color .2s,color .2s}
 .btn-ghost:hover{border-color:rgba(244,241,234,.5);color:var(--light)}
-/* Hero PLA image panel */
-.hero-visual{
-  position:relative;z-index:2;flex-shrink:0;width:420px;
-}
-.hero-img-frame{
-  position:relative;border:1px solid rgba(244,241,234,.12);
-  overflow:hidden;
-}
+.hero-visual{position:relative;z-index:2;flex-shrink:0;width:420px}
+.hero-img-frame{position:relative;border:1px solid rgba(244,241,234,.12);overflow:hidden}
 .hero-img-frame img{width:100%;height:480px;object-fit:cover;display:block}
-.hero-img-frame::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(to bottom,transparent 60%,rgba(31,42,36,.65));
-  z-index:1;
-}
+.hero-img-frame::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 60%,rgba(31,42,36,.65));z-index:1}
 .frame-tick{position:absolute;width:14px;height:14px;z-index:2}
 .frame-tick.tl{top:0;left:0;border-top:1.5px solid var(--clay);border-left:1.5px solid var(--clay)}
 .frame-tick.tr{top:0;right:0;border-top:1.5px solid var(--clay);border-right:1.5px solid var(--clay)}
 .frame-tick.bl{bottom:0;left:0;border-bottom:1.5px solid var(--clay);border-left:1.5px solid var(--clay)}
 .frame-tick.br{bottom:0;right:0;border-bottom:1.5px solid var(--clay);border-right:1.5px solid var(--clay)}
-.hero-img-caption{
-  position:absolute;bottom:16px;left:18px;right:18px;z-index:3;
-  font-family:'Space Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;
-  color:rgba(244,241,234,.5);display:flex;justify-content:space-between;
-}
+.hero-img-caption{position:absolute;bottom:16px;left:18px;right:18px;z-index:3;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(244,241,234,.5);display:flex;justify-content:space-between}
 .hero-scroll{position:absolute;bottom:36px;left:60px;z-index:2;display:flex;align-items:center;gap:12px;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(244,241,234,.25)}
 .hero-scroll-line{width:36px;height:1px;background:rgba(244,241,234,.2)}
 
-/* ─── SECTIONS ─── */
+/* SECTIONS */
 section{padding:100px 60px}
 .s-label{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--clay);margin-bottom:18px}
 .s-title{font-size:clamp(32px,4vw,54px);font-weight:800;letter-spacing:-1.8px;line-height:1;margin-bottom:24px}
 .s-title em{font-style:normal;font-weight:300;color:var(--muted)}
 
-/* ─── ABOUT ─── */
+/* ABOUT */
 .about{background:var(--paper);border-bottom:1px solid var(--sand)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:64px}
 .about-text p{font-size:16px;line-height:1.85;color:#5a5f59;margin-bottom:18px}
 .about-text p:last-child{margin-bottom:0}
-.about-right{}
-.about-photo{position:relative;margin-bottom:1px}
-.about-photo img{width:100%;height:300px;object-fit:cover;display:block}
-.about-photo-label{
-  background:var(--ink);padding:12px 18px;
-  font-family:'Space Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;
-  color:rgba(244,241,234,.45);display:flex;justify-content:space-between;
-}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--sand);border:1px solid var(--sand)}
-.stat{background:var(--paper);padding:30px 26px}
-.stat-n{font-size:42px;font-weight:800;letter-spacing:-2px;line-height:1;color:var(--ink)}
-.stat-n b{color:var(--clay)}
-.stat-l{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:7px}
+.about-photo{position:relative}
+.about-photo img{width:100%;height:360px;object-fit:cover;display:block}
+.about-photo-label{background:var(--ink);padding:12px 18px;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(244,241,234,.45);display:flex;justify-content:space-between}
 
-/* ─── PRODUCTS ─── */
+/* PRODUCTS */
 .products{background:var(--ink)}
 .products .s-label{color:rgba(192,97,47,.85)}
 .products .s-title{color:var(--light)}
@@ -135,23 +91,12 @@ section{padding:100px 60px}
 .pcard-tags{display:flex;flex-wrap:wrap;gap:5px}
 .tag{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border:1px solid rgba(244,241,234,.1);color:rgba(244,241,234,.32)}
 
-/* ─── SUSTAINABILITY ─── */
+/* SUSTAINABILITY */
 .sustain{background:var(--paper);border-top:1px solid var(--sand);border-bottom:1px solid var(--sand)}
-.sustain-banner{
-  width:calc(100% + 120px);margin:48px -60px 0;
-  height:260px;overflow:hidden;position:relative;
-}
+.sustain-banner{width:calc(100% + 120px);margin:48px -60px 0;height:260px;overflow:hidden;position:relative}
 .sustain-banner img{width:100%;height:100%;object-fit:cover;display:block}
-.sustain-banner::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(to bottom,rgba(250,247,241,.8) 0%,transparent 40%,transparent 60%,rgba(250,247,241,.85) 100%);
-  z-index:1;
-}
-.sustain-banner-text{
-  position:absolute;left:60px;bottom:28px;z-index:2;
-  font-family:'Space Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;
-  color:rgba(31,42,36,.4);
-}
+.sustain-banner::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(250,247,241,.8) 0%,transparent 40%,transparent 60%,rgba(250,247,241,.85) 100%);z-index:1}
+.sustain-banner-text{position:absolute;left:60px;bottom:28px;z-index:2;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(31,42,36,.4)}
 .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--sand);border:1px solid var(--sand);margin-top:0}
 .pillar{background:var(--paper);padding:48px 42px;position:relative;overflow:hidden}
 .pillar-ghost{position:absolute;top:-12px;right:16px;font-size:120px;font-weight:800;letter-spacing:-4px;color:var(--ink);opacity:.04;line-height:1;pointer-events:none}
@@ -159,22 +104,18 @@ section{padding:100px 60px}
 .pillar-title{font-size:26px;font-weight:700;letter-spacing:-.6px;color:var(--ink);margin-bottom:12px}
 .pillar-desc{font-size:15px;line-height:1.8;color:#5a5f59}
 
-/* ─── AFRICA ─── */
+/* AFRICA */
 .africa{background:var(--forest);position:relative;overflow:hidden}
 .africa-texture{position:absolute;inset:0;background:url('perlin-512.jpg') center/cover;opacity:.06;mix-blend-mode:overlay;pointer-events:none}
 .africa .s-label{color:rgba(244,241,234,.5);position:relative}
 .africa .s-title{color:var(--light);position:relative}
 .africa .s-title em{color:rgba(244,241,234,.38)}
 .africa-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:72px;align-items:start;margin-top:64px;position:relative}
-.africa-left{}
 .africa-text p{font-size:16px;line-height:1.85;color:rgba(244,241,234,.65);margin-bottom:18px}
-.africa-photo{margin-top:32px;position:relative}
+.africa-text p:last-child{margin-bottom:0}
+.africa-photo{margin-top:32px}
 .africa-photo img{width:100%;height:220px;object-fit:cover;display:block;opacity:.75}
-.africa-photo-label{
-  background:rgba(31,42,36,.6);padding:10px 16px;
-  font-family:'Space Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;
-  color:rgba(244,241,234,.4);
-}
+.africa-photo-label{background:rgba(31,42,36,.6);padding:10px 16px;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(244,241,234,.4)}
 .africa-points{display:flex;flex-direction:column;gap:1px;background:rgba(244,241,234,.1);border:1px solid rgba(244,241,234,.1)}
 .apoint{background:var(--forest);padding:26px 28px;display:flex;gap:18px;align-items:flex-start;transition:background .2s}
 .apoint:hover{background:#266e50}
@@ -182,7 +123,7 @@ section{padding:100px 60px}
 .apoint strong{display:block;font-size:15px;font-weight:600;color:var(--light);margin-bottom:5px}
 .apoint p{font-size:13px;line-height:1.65;color:rgba(244,241,234,.52);margin:0}
 
-/* ─── CONTACT ─── */
+/* CONTACT */
 .contact{background:var(--paper);border-top:1px solid var(--sand)}
 .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:72px;margin-top:64px}
 .contact-info p{font-size:16px;line-height:1.85;color:#5a5f59;margin-bottom:28px}
@@ -194,35 +135,29 @@ section{padding:100px 60px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .fg{display:flex;flex-direction:column;gap:5px}
 .fg label{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
-.fg input,.fg select,.fg textarea{
-  background:#fff;border:1px solid var(--sand);padding:12px 14px;
-  font-family:'Sora',sans-serif;font-size:14px;color:var(--ink);
-  outline:none;transition:border-color .2s;-webkit-appearance:none;border-radius:0;
-}
+.fg input,.fg select,.fg textarea{background:#fff;border:1px solid var(--sand);padding:12px 14px;font-family:'Sora',sans-serif;font-size:14px;color:var(--ink);outline:none;transition:border-color .2s;-webkit-appearance:none;border-radius:0}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--teal)}
 .fg textarea{resize:vertical;min-height:96px}
 .fg select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238a8d86'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
 .form-submit{background:var(--clay);color:#fff;border:none;padding:15px 34px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;align-self:flex-start;transition:background .2s}
 .form-submit:hover{background:#a84f25}
 
-/* ─── FOOTER ─── */
+/* FOOTER */
 footer{background:var(--ink);padding:52px 60px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(244,241,234,.07)}
-.footer-logo{display:flex;align-items:center}
-.footer-logo img{height:22px;width:auto;filter:brightness(0) invert(.35)}
+.footer-logo img{height:22px;width:auto;filter:brightness(0) invert(.35);display:block}
 .footer-tagline{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(244,241,234,.22);margin-top:10px}
 .footer-links{display:flex;gap:26px;margin-bottom:10px;justify-content:flex-end}
 .footer-links a{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(244,241,234,.28);text-decoration:none;transition:color .2s}
 .footer-links a:hover{color:var(--clay)}
 .footer-copy{font-family:'Space Mono',monospace;font-size:9px;color:rgba(244,241,234,.18);text-align:right}
 
-/* ─── REVEAL ─── */
+/* REVEAL */
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
 .reveal.in{opacity:1;transform:none}
 .reveal-d1{transition-delay:.1s}
 .reveal-d2{transition-delay:.2s}
-.reveal-d3{transition-delay:.3s}
 
-/* ─── RESPONSIVE ─── */
+/* RESPONSIVE */
 @media(max-width:960px){
   nav{padding:0 24px}
   .nav-links{display:none}
@@ -243,7 +178,7 @@ footer{background:var(--ink);padding:52px 60px;display:flex;justify-content:spac
 </head>
 <body>
 
-<!-- ─── NAV ─── -->
+<!-- NAV -->
 <nav id="nav">
   <a href="#" class="nav-logo">
     <img src="images/chemvion-logo.svg" alt="Chemvion Solutions">
@@ -257,7 +192,7 @@ footer{background:var(--ink);padding:52px 60px;display:flex;justify-content:spac
   </ul>
 </nav>
 
-<!-- ─── HERO ─── -->
+<!-- HERO -->
 <section class="hero">
   <video class="hero-video" autoplay muted loop playsinline poster="images/compostable-pellets.jpg">
     <source src="videos/v2-resin-crystal.mp4" type="video/mp4">
@@ -265,10 +200,10 @@ footer{background:var(--ink);padding:52px 60px;display:flex;justify-content:spac
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-    <div class="hero-label">Bioplastics Resin Distribution · Africa</div>
-    <h1 class="hero-h1">Africa's<br><span>Bioplastics</span><br>Partner.</h1>
+    <div class="hero-label">Bio-based &amp; Compostable Resins · Africa</div>
+    <h1 class="hero-h1">Africa's<br><span>Sustainable</span><br>Resin Partner.</h1>
     <div class="hero-tagline">Compostable — Renewable — Recyclable</div>
-    <p class="hero-sub">Distributing PLA, PHA and next-generation bio-based resins to manufacturers, converters and brands across the African continent.</p>
+    <p class="hero-sub">Supplying bio-based and compostable resins from non-food competing feedstocks to manufacturers and brands across Africa.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Request a Sample</a>
       <a href="#products" class="btn-ghost">Our Products</a>
@@ -277,14 +212,14 @@ footer{background:var(--ink);padding:52px 60px;display:flex;justify-content:spac
 
   <div class="hero-visual">
     <div class="hero-img-frame">
-      <img src="images/compostable-pellets.jpg" alt="PLA bioplastic resin pellets">
+      <img src="images/compostable-pellets.jpg" alt="Bio-based compostable resin pellets">
       <div class="frame-tick tl"></div>
       <div class="frame-tick tr"></div>
       <div class="frame-tick bl"></div>
       <div class="frame-tick br"></div>
       <div class="hero-img-caption">
-        <span>PLA Bioplastic Resin — Compostable Grade</span>
-        <span>CHV·PLA·01</span>
+        <span>Bio-based Compostable Resin</span>
+        <span>CHV·BIO·01</span>
       </div>
     </div>
   </div>
@@ -292,84 +227,78 @@ footer{background:var(--ink);padding:52px 60px;display:flex;justify-content:spac
   <div class="hero-scroll"><div class="hero-scroll-line"></div>Scroll to explore</div>
 </section>
 
-<!-- ─── ABOUT ─── -->
+<!-- ABOUT -->
 <section class="about" id="about">
   <div class="s-label">About Chemvion</div>
-  <h2 class="s-title reveal">Connecting Africa to the<br><em>Bioplastics Revolution</em></h2>
+  <h2 class="s-title reveal">Connecting Africa to<br><em>Sustainable Materials</em></h2>
   <div class="about-grid">
     <div class="about-text reveal">
-      <p>Chemvion Solutions is a specialised distributor of bio-based and compostable resins, bridging world-leading polymer producers with manufacturers and converters across Africa.</p>
-      <p>We carry stock in key logistics hubs, manage import documentation, and provide hands-on technical support — so our partners can focus on production, not procurement.</p>
-      <p>From flexible packaging in Lagos to rigid food-service ware in Nairobi, Chemvion delivers the grades, the volumes and the expertise that African industry needs to transition away from fossil-based plastics.</p>
+      <p>Chemvion Solutions is a South African distributor of bio-based and compostable resins, connecting leading polymer producers with manufacturers and brands across Africa.</p>
+      <p>Our focus is on resins derived from non-food competing starch and sugar feedstocks — materials that reduce dependence on fossil resources while meeting the performance demands of modern packaging, agriculture and industrial applications.</p>
+      <p>Based in Johannesburg and Cape Town, we support our customers from initial product selection through to delivery, with a commitment to making sustainable materials straightforward to source.</p>
     </div>
-    <div class="about-right reveal reveal-d1">
+    <div class="reveal reveal-d1">
       <div class="about-photo">
-        <img src="images/bio-raw-materials.jpg" alt="Bio-based raw materials — corn and sugarcane feedstocks for PLA">
+        <img src="images/bio-raw-materials.jpg" alt="Non-food competing bio-based raw material feedstocks">
         <div class="about-photo-label">
-          <span>Bio-based feedstocks</span>
-          <span>Corn · Sugarcane · Cassava</span>
+          <span>Non-food competing feedstocks</span>
+          <span>Starch &amp; Sugar Sources</span>
         </div>
-      </div>
-      <div class="stats">
-        <div class="stat"><div class="stat-n">40<b>+</b></div><div class="stat-l">Countries Served</div></div>
-        <div class="stat"><div class="stat-n">5k<b>+</b></div><div class="stat-l">Tonnes Distributed</div></div>
-        <div class="stat"><div class="stat-n">12<b>+</b></div><div class="stat-l">Resin Grades</div></div>
-        <div class="stat"><div class="stat-n">200<b>+</b></div><div class="stat-l">Brand Partners</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── PRODUCTS ─── -->
+<!-- PRODUCTS -->
 <section class="products" id="products">
   <div class="s-label">Our Portfolio</div>
   <h2 class="s-title reveal">Bio-Based Resins for<br><em>Every Application</em></h2>
   <div class="products-grid">
 
     <div class="pcard reveal">
-      <img class="pcard-img" src="images/pla-polymer.jpg" alt="PLA polymer resin pellets">
+      <img class="pcard-img" src="images/pla-polymer.jpg" alt="Bio-based resin pellets for packaging">
       <div class="pcard-ghost">01</div>
       <div class="pcard-body">
-        <div class="pcard-abbr">PLA</div>
-        <div class="pcard-full">Polylactic Acid</div>
-        <p class="pcard-desc">Derived from fermented plant sugars — corn, cassava, sugarcane. The most widely used biopolymer globally, available in multiple flow grades for injection moulding, film, fibre and thermoforming.</p>
+        <div class="pcard-abbr">Packaging</div>
+        <div class="pcard-full">Rigid &amp; Flexible Formats</div>
+        <p class="pcard-desc">Bio-based, compostable resins from non-food competing starch and sugar sources — available in grades suited to rigid containers, food-service ware and flexible packaging formats.</p>
         <div class="pcard-tags">
-          <span class="tag">Rigid Packaging</span>
           <span class="tag">Food Contact</span>
-          <span class="tag">Film & Sheet</span>
-          <span class="tag">3D Print</span>
+          <span class="tag">Rigid Containers</span>
+          <span class="tag">Food Service</span>
+          <span class="tag">Flexible Wrap</span>
         </div>
       </div>
     </div>
 
     <div class="pcard reveal reveal-d1">
-      <img class="pcard-img" src="images/pha-granules.jpg" alt="PHA biopolymer granules">
+      <img class="pcard-img" src="images/pha-granules.jpg" alt="Bio-based resin granules for agriculture">
       <div class="pcard-ghost">02</div>
       <div class="pcard-body">
-        <div class="pcard-abbr">PHA</div>
-        <div class="pcard-full">Polyhydroxyalkanoates</div>
-        <p class="pcard-desc">Microbially produced in-cell polyesters — truly marine and soil biodegradable. Premium-grade PHAs for applications where end-of-life performance is non-negotiable.</p>
+        <div class="pcard-abbr">Agriculture</div>
+        <div class="pcard-full">Films &amp; Soil Applications</div>
+        <p class="pcard-desc">Compostable resin grades designed to break down safely in soil without leaving microplastic residue — suitable for mulch film, seedling trays and other horticultural applications.</p>
         <div class="pcard-tags">
-          <span class="tag">Marine-Safe</span>
-          <span class="tag">Soil Biodeg.</span>
-          <span class="tag">Medical</span>
-          <span class="tag">Agriculture</span>
+          <span class="tag">Mulch Film</span>
+          <span class="tag">Horticulture</span>
+          <span class="tag">Seedling Trays</span>
+          <span class="tag">Soil-Compatible</span>
         </div>
       </div>
     </div>
 
     <div class="pcard reveal reveal-d2">
-      <img class="pcard-img" src="images/i1-plastic-pellets.jpg" alt="PBAT compostable resin pellets">
+      <img class="pcard-img" src="images/i1-plastic-pellets.jpg" alt="Compostable resin pellets for industrial use">
       <div class="pcard-ghost">03</div>
       <div class="pcard-body">
-        <div class="pcard-abbr">PBAT / PBS</div>
-        <div class="pcard-full">Compostable Blending Resins</div>
-        <p class="pcard-desc">Flexible, industrially compostable copolymers used as blend partners with PLA to improve toughness and elongation. Essential for soft packaging, bags and agricultural mulch film.</p>
+        <div class="pcard-abbr">Industrial</div>
+        <div class="pcard-full">Bags, Liners &amp; Non-wovens</div>
+        <p class="pcard-desc">Compostable grades for waste management, retail and industrial end-uses — from certified compostable bags and bin liners to non-woven alternatives for hygiene and industrial applications.</p>
         <div class="pcard-tags">
-          <span class="tag">Flexible Film</span>
           <span class="tag">Carrier Bags</span>
-          <span class="tag">Mulch Film</span>
-          <span class="tag">Blend Modifier</span>
+          <span class="tag">Bin Liners</span>
+          <span class="tag">Non-wovens</span>
+          <span class="tag">Waste Management</span>
         </div>
       </div>
     </div>
@@ -377,13 +306,13 @@ footer{background:var(--ink);padding:52px 60px;display:flex;justify-content:spac
   </div>
 </section>
 
-<!-- ─── SUSTAINABILITY ─── -->
+<!-- SUSTAINABILITY -->
 <section class="sustain" id="sustainability">
   <div class="s-label">Our Commitment</div>
   <h2 class="s-title reveal">Built for a<br><em>Circular Economy</em></h2>
   <div class="sustain-banner reveal">
-    <img src="images/compostable-pellets.jpg" alt="Compostable PLA and PBAT bioplastic pellets">
-    <div class="sustain-banner-text">Green-grade compostable bioplastic pellets — EN 13432 certified</div>
+    <img src="images/compostable-pellets.jpg" alt="Bio-based compostable resin pellets">
+    <div class="sustain-banner-text">Certified compostable bio-based resins from non-food competing sources</div>
   </div>
   <div class="pillars">
     <div class="pillar reveal">
@@ -397,7 +326,7 @@ footer{background:var(--ink);padding:52px 60px;display:flex;justify-content:spac
         </svg>
       </div>
       <div class="pillar-title">Compostable</div>
-      <p class="pillar-desc">Our resins meet EN 13432 and ASTM D6400 standards for industrial compostability. Select grades achieve home-compost certification — returning nutrients to soil at every product's end of life.</p>
+      <p class="pillar-desc">The resins we supply meet internationally recognised standards for industrial compostability, with select grades certified for home composting — returning to the earth at the end of every product's life.</p>
     </div>
     <div class="pillar reveal reveal-d1">
       <div class="pillar-ghost">R</div>
@@ -414,7 +343,7 @@ footer{background:var(--ink);padding:52px 60px;display:flex;justify-content:spac
         </svg>
       </div>
       <div class="pillar-title">Renewable</div>
-      <p class="pillar-desc">Every tonne of bio-based resin we distribute is derived from annually renewable feedstocks — corn starch, sugarcane, cassava and agricultural residues — decoupling plastics from fossil resources.</p>
+      <p class="pillar-desc">Every bio-based resin in our portfolio is derived from annually renewable, non-food competing starch and sugar feedstocks — decoupling plastic production from finite fossil resources.</p>
     </div>
     <div class="pillar reveal reveal-d2">
       <div class="pillar-ghost">R</div>
@@ -428,93 +357,88 @@ footer{background:var(--ink);padding:52px 60px;display:flex;justify-content:spac
         </svg>
       </div>
       <div class="pillar-title">Recyclable</div>
-      <p class="pillar-desc">Working with brands and municipalities to establish closed-loop collection programmes. PLA can be chemically recycled back to lactic acid — re-entering production as virgin-quality resin.</p>
+      <p class="pillar-desc">We support customers in designing products for end-of-life recovery — working towards closed-loop material systems that keep bio-based resources in use for as long as possible.</p>
     </div>
   </div>
 </section>
 
-<!-- ─── AFRICA ─── -->
+<!-- AFRICA -->
 <section class="africa" id="africa">
   <div class="africa-texture"></div>
-  <div class="s-label">Why Africa</div>
-  <h2 class="s-title reveal">Serving<br><em>the Continent</em></h2>
+  <div class="s-label">Our Market</div>
+  <h2 class="s-title reveal">Rooted in<br><em>Southern Africa</em></h2>
   <div class="africa-grid">
-    <div class="africa-left reveal">
+    <div class="reveal">
       <div class="africa-text">
-        <p>Africa produces over 17 million tonnes of plastic annually — yet bio-based and compostable alternatives account for less than 0.3% of that volume. The gap between global innovation and local availability is where Chemvion operates.</p>
-        <p>We have built the relationships, logistics infrastructure and regulatory knowledge needed to move speciality resins from source to factory floor across the continent — efficiently and at scale.</p>
+        <p>Africa represents one of the most significant growth opportunities for sustainable materials. Increasing regulatory pressure on single-use plastics, combined with growing consumer and brand demand for responsible packaging, is creating real momentum for bio-based alternatives.</p>
+        <p>Chemvion is based in South Africa — positioned to serve manufacturers, converters and brands looking to make the transition to compostable and bio-based materials.</p>
       </div>
       <div class="africa-photo">
-        <img src="images/pha-eup-egypt.jpg" alt="PHA bioplastics production in Africa">
-        <div class="africa-photo-label">Pan-African distribution · Lagos · Nairobi · Johannesburg · Casablanca</div>
+        <img src="images/pha-eup-egypt.jpg" alt="Sustainable materials in Africa">
+        <div class="africa-photo-label">Johannesburg &amp; Cape Town, South Africa</div>
       </div>
     </div>
     <div class="africa-points reveal reveal-d1">
       <div class="apoint">
         <span class="apoint-num">01</span>
-        <div><strong>Pan-African Distribution</strong><p>Stock positions in Lagos, Nairobi, Johannesburg and Casablanca, with onward reach to 40+ countries via established freight networks.</p></div>
+        <div><strong>South African Base</strong><p>Headquartered in Johannesburg with a presence in Cape Town — grounded in the local market with an understanding of the Southern African business environment.</p></div>
       </div>
       <div class="apoint">
         <span class="apoint-num">02</span>
-        <div><strong>Logistics & Customs Expertise</strong><p>We manage HS code classification, ECOWAS and SADC trade documentation, and port-to-plant coordination so your material arrives on time.</p></div>
+        <div><strong>Informed Sourcing</strong><p>We stay current with evolving plastics legislation and sustainability standards across the region, helping customers make confident and compliant material choices.</p></div>
       </div>
       <div class="apoint">
         <span class="apoint-num">03</span>
-        <div><strong>Regulatory Compliance</strong><p>Up-to-date with national single-use plastics bans and extended producer responsibility regulations, helping customers stay ahead of legislation.</p></div>
-      </div>
-      <div class="apoint">
-        <span class="apoint-num">04</span>
-        <div><strong>Technical Support</strong><p>Application engineers on the ground for processing trials, formulation optimisation and quality troubleshooting — in your time zone.</p></div>
+        <div><strong>Customer Partnership</strong><p>We work closely with customers from initial sample through to commercial supply, providing guidance on product selection and application suitability throughout.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── CONTACT ─── -->
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="s-label">Get in Touch</div>
   <h2 class="s-title reveal">Partner<br><em>With Us</em></h2>
   <div class="contact-grid">
     <div class="reveal">
-      <p class="contact-info" style="font-size:16px;line-height:1.85;color:#5a5f59;margin-bottom:28px">Whether you're sourcing your first trial shipment or scaling to commercial volumes, our team is ready to help you find the right grade, at the right price, delivered to your facility.</p>
+      <p class="contact-info" style="font-size:16px;line-height:1.85;color:#5a5f59;margin-bottom:28px">Whether you are exploring bio-based materials for the first time or looking to expand your sustainable product range, we would be glad to help you find the right solution.</p>
       <div class="cdetails">
-        <div class="citem"><span class="citem-l">Email</span><span class="citem-v">hello@chemvion.africa</span></div>
-        <div class="citem"><span class="citem-l">Phone</span><span class="citem-v">+234 (0) 800 CHEMVION</span></div>
-        <div class="citem"><span class="citem-l">HQ</span><span class="citem-v">Lagos, Nigeria</span></div>
-        <div class="citem"><span class="citem-l">Offices</span><span class="citem-v">Nairobi · Johannesburg · Casablanca</span></div>
+        <div class="citem"><span class="citem-l">Email</span><span class="citem-v">info@chemvionsa.com</span></div>
+        <div class="citem"><span class="citem-l">Location</span><span class="citem-v">Johannesburg, South Africa</span></div>
+        <div class="citem"><span class="citem-l">Also in</span><span class="citem-v">Cape Town, South Africa</span></div>
       </div>
     </div>
     <form class="contact-form reveal reveal-d1" onsubmit="return false">
       <div class="form-row">
-        <div class="fg"><label>First Name</label><input type="text" placeholder="Amara"></div>
-        <div class="fg"><label>Last Name</label><input type="text" placeholder="Okeke"></div>
+        <div class="fg"><label>First Name</label><input type="text" placeholder="First name"></div>
+        <div class="fg"><label>Last Name</label><input type="text" placeholder="Last name"></div>
       </div>
       <div class="fg"><label>Company</label><input type="text" placeholder="Your company name"></div>
       <div class="fg"><label>Country</label>
         <select>
           <option value="">Select country…</option>
-          <option>Nigeria</option><option>Kenya</option><option>South Africa</option>
+          <option>South Africa</option><option>Nigeria</option><option>Kenya</option>
           <option>Ghana</option><option>Ethiopia</option><option>Tanzania</option>
+          <option>Zimbabwe</option><option>Mozambique</option><option>Zambia</option>
           <option>Morocco</option><option>Egypt</option><option>Other</option>
         </select>
       </div>
-      <div class="fg"><label>Resin of Interest</label>
+      <div class="fg"><label>Application Area</label>
         <select>
-          <option value="">Select resin…</option>
-          <option>PLA — Polylactic Acid</option>
-          <option>PHA — Polyhydroxyalkanoates</option>
-          <option>PBAT — Flexible Compostable</option>
-          <option>PBS — Polybutylene Succinate</option>
-          <option>Multiple / Not Sure</option>
+          <option value="">Select application…</option>
+          <option>Packaging</option>
+          <option>Agriculture &amp; Horticulture</option>
+          <option>Industrial &amp; Waste Management</option>
+          <option>Not Sure / Other</option>
         </select>
       </div>
-      <div class="fg"><label>Message</label><textarea placeholder="Tell us about your application, volume requirements, or any questions…"></textarea></div>
+      <div class="fg"><label>Message</label><textarea placeholder="Tell us about your application or requirements…"></textarea></div>
       <button type="submit" class="form-submit">Send Enquiry</button>
     </form>
   </div>
 </section>
 
-<!-- ─── FOOTER ─── -->
+<!-- FOOTER -->
 <footer>
   <div>
     <div class="footer-logo">
@@ -530,18 +454,16 @@ footer{background:var(--ink);padding:52px 60px;display:flex;justify-content:spac
       <a href="#africa">Africa</a>
       <a href="#contact">Contact</a>
     </div>
-    <div class="footer-copy">© 2026 Chemvion Solutions · Bioplastics Resin Distribution · Africa</div>
+    <div class="footer-copy">© 2026 Chemvion Solutions · South Africa</div>
   </div>
 </footer>
 
 <script>
-// Nav scroll behaviour
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 60);
 }, {passive:true});
 
-// Scroll-reveal via IntersectionObserver
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
 }, {threshold: 0.08});
