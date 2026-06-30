@@ -403,14 +403,19 @@ footer{background:var(--ink);padding:52px 60px;display:flex;justify-content:spac
         <div class="citem"><span class="citem-l">Also in</span><span class="citem-v">Cape Town, South Africa</span></div>
       </div>
     </div>
-    <form class="contact-form reveal reveal-d1" onsubmit="return false">
+    <form class="contact-form reveal reveal-d1" id="enquiry-form">
+      <input type="hidden" name="access_key" value="152075">
+      <input type="hidden" name="subject" value="New Enquiry — Chemvion Solutions Website">
+      <input type="hidden" name="from_name" value="Chemvion Website">
+      <input type="checkbox" name="botcheck" style="display:none">
       <div class="form-row">
-        <div class="fg"><label>First Name</label><input type="text" placeholder="First name"></div>
-        <div class="fg"><label>Last Name</label><input type="text" placeholder="Last name"></div>
+        <div class="fg"><label>First Name</label><input type="text" name="first_name" placeholder="First name" required></div>
+        <div class="fg"><label>Last Name</label><input type="text" name="last_name" placeholder="Last name" required></div>
       </div>
-      <div class="fg"><label>Company</label><input type="text" placeholder="Your company name"></div>
+      <div class="fg"><label>Email</label><input type="email" name="email" placeholder="Your email address" required></div>
+      <div class="fg"><label>Company</label><input type="text" name="company" placeholder="Your company name"></div>
       <div class="fg"><label>Country</label>
-        <select>
+        <select name="country">
           <option value="">Select country…</option>
           <option>South Africa</option><option>Nigeria</option><option>Kenya</option>
           <option>Ghana</option><option>Ethiopia</option><option>Tanzania</option>
@@ -419,7 +424,7 @@ footer{background:var(--ink);padding:52px 60px;display:flex;justify-content:spac
         </select>
       </div>
       <div class="fg"><label>Application Area</label>
-        <select>
+        <select name="application">
           <option value="">Select application…</option>
           <option>Packaging &amp; Food Service</option>
           <option>Cutlery &amp; Straws</option>
@@ -429,8 +434,9 @@ footer{background:var(--ink);padding:52px 60px;display:flex;justify-content:spac
           <option>Not Sure / Other</option>
         </select>
       </div>
-      <div class="fg"><label>Message</label><textarea placeholder="Tell us about your application or requirements…"></textarea></div>
-      <button type="submit" class="form-submit">Send Enquiry</button>
+      <div class="fg"><label>Message</label><textarea name="message" placeholder="Tell us about your application or requirements…"></textarea></div>
+      <div id="form-status" style="display:none;padding:12px 16px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:1px"></div>
+      <button type="submit" class="form-submit" id="form-btn">Send Enquiry</button>
     </form>
   </div>
 </section>
@@ -465,6 +471,38 @@ const io = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
 }, {threshold: 0.08});
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+document.getElementById('enquiry-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('form-btn');
+  const status = document.getElementById('form-status');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: new FormData(this)
+    });
+    const data = await res.json();
+    if (data.success) {
+      status.style.display = 'block';
+      status.style.background = '#edf7f2';
+      status.style.color = '#2e7d5b';
+      status.textContent = 'Thank you — your enquiry has been sent. We will be in touch shortly.';
+      this.reset();
+      btn.textContent = 'Sent';
+    } else {
+      throw new Error(data.message);
+    }
+  } catch(err) {
+    status.style.display = 'block';
+    status.style.background = '#fff3ef';
+    status.style.color = '#c0612f';
+    status.textContent = 'Something went wrong. Please email us directly at info@chemvionsa.com';
+    btn.textContent = 'Send Enquiry';
+    btn.disabled = false;
+  }
+});
 </script>
 </body>
 </html>
