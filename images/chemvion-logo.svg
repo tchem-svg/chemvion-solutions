@@ -1,12 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 252 40" fill="none">
-  <!-- Chemvion Solutions — Concept 01 Polymer Loop -->
-  <!-- Six monomers closed into a ring; clay node = virgin resin entering the loop -->
-  <circle cx="20" cy="20" r="12" fill="none" stroke="#1f2a24" stroke-width="2.2"/>
-  <circle cx="20" cy="8" r="2.8" fill="#c0612f"/>
-  <circle cx="30.4" cy="14" r="2.3" fill="#1f2a24"/>
-  <circle cx="30.4" cy="26" r="2.3" fill="#1f2a24"/>
-  <circle cx="20" cy="32" r="2.3" fill="#1f2a24"/>
-  <circle cx="9.6" cy="26" r="2.3" fill="#1f2a24"/>
-  <circle cx="9.6" cy="14" r="2.3" fill="#1f2a24"/>
+  <!-- Chemvion Solutions — Concept 05 Dual Cycle -->
+  <!-- Two material streams (bio-based and recovered) closing into one ring; clay droplet = resin -->
+  <path d="M20 7.2 A12.8 12.8 0 0 0 20 32.8" fill="none" stroke="#2e7d5b" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M20 32.8 A12.8 12.8 0 0 1 20 7.2" fill="none" stroke="#2b8a9e" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M20 14.72 C23.24 17.96 23.6 20.48 23.6 21.74 A3.6 3.6 0 1 1 16.4 21.74 C16.4 20.48 16.76 17.96 20 14.72 Z" fill="#c0612f"/>
   <text x="46" y="26.5" font-family="Sora,Arial,Helvetica,sans-serif" font-size="18" font-weight="700" letter-spacing="-0.4" fill="#1f2a24">Chemvion <tspan font-weight="300" fill="#7c8079">Solutions</tspan></text>
 </svg>
