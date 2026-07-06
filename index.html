@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chemvion Solutions | Certified Bio-based Resins · Africa</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231f2a24'/%3E%3Ccircle cx='50' cy='52' r='26' fill='none' stroke='%23f4f1ea' stroke-width='5'/%3E%3Ccircle cx='50' cy='26' r='8' fill='%23d8804f'/%3E%3Ccircle cx='72.5' cy='39' r='6' fill='%23f4f1ea'/%3E%3Ccircle cx='72.5' cy='65' r='6' fill='%23f4f1ea'/%3E%3Ccircle cx='50' cy='78' r='6' fill='%23f4f1ea'/%3E%3Ccircle cx='27.5' cy='65' r='6' fill='%23f4f1ea'/%3E%3Ccircle cx='27.5' cy='39' r='6' fill='%23f4f1ea'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -21,8 +22,8 @@ img{display:block;max-width:100%;height:auto}
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 60px;height:72px;display:flex;align-items:center;justify-content:space-between;transition:background .35s,border-color .35s;border-bottom:1px solid transparent}
 nav.scrolled{background:rgba(250,247,241,.97);backdrop-filter:blur(10px);border-color:var(--sand)}
-.nav-logo img{height:28px;width:auto;filter:brightness(0) invert(1);transition:filter .35s;display:block}
-nav.scrolled .nav-logo img{filter:brightness(0)}
+.nav-logo svg{height:30px;width:auto;color:var(--light);transition:color .35s;display:block}
+nav.scrolled .nav-logo svg{color:var(--ink)}
 .nav-links{display:flex;align-items:center;gap:36px;list-style:none}
 .nav-links a{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:rgba(244,241,234,.75);transition:color .2s}
 nav.scrolled .nav-links a{color:var(--muted)}
@@ -144,7 +145,7 @@ section{padding:100px 60px}
 
 /* FOOTER */
 footer{background:var(--ink);padding:52px 60px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(244,241,234,.07)}
-.footer-logo img{height:22px;width:auto;filter:brightness(0) invert(.35);display:block}
+.footer-logo svg{height:24px;width:auto;color:rgba(244,241,234,.6);display:block}
 .footer-tagline{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(244,241,234,.22);margin-top:10px}
 .footer-links{display:flex;gap:26px;margin-bottom:10px;justify-content:flex-end}
 .footer-links a{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(244,241,234,.28);text-decoration:none;transition:color .2s}
@@ -180,8 +181,17 @@ footer{background:var(--ink);padding:52px 60px;display:flex;justify-content:spac
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="#" class="nav-logo">
-    <img src="images/chemvion-logo.svg" alt="Chemvion Solutions">
+  <a href="#" class="nav-logo" aria-label="Chemvion Solutions">
+    <svg viewBox="0 0 252 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+      <circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="2.2"/>
+      <circle cx="20" cy="8" r="2.8" fill="#c0612f"/>
+      <circle cx="30.4" cy="14" r="2.3" fill="currentColor"/>
+      <circle cx="30.4" cy="26" r="2.3" fill="currentColor"/>
+      <circle cx="20" cy="32" r="2.3" fill="currentColor"/>
+      <circle cx="9.6" cy="26" r="2.3" fill="currentColor"/>
+      <circle cx="9.6" cy="14" r="2.3" fill="currentColor"/>
+      <text x="46" y="26.5" font-family="Sora,sans-serif" font-size="18" font-weight="700" letter-spacing="-0.4" fill="currentColor">Chemvion <tspan font-weight="300" opacity="0.55">Solutions</tspan></text>
+    </svg>
   </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
@@ -445,7 +455,16 @@ footer{background:var(--ink);padding:52px 60px;display:flex;justify-content:spac
 <footer>
   <div>
     <div class="footer-logo">
-      <img src="images/chemvion-logo.svg" alt="Chemvion Solutions">
+      <svg viewBox="0 0 252 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chemvion Solutions">
+        <circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="2.2"/>
+        <circle cx="20" cy="8" r="2.8" fill="#d8804f"/>
+        <circle cx="30.4" cy="14" r="2.3" fill="currentColor"/>
+        <circle cx="30.4" cy="26" r="2.3" fill="currentColor"/>
+        <circle cx="20" cy="32" r="2.3" fill="currentColor"/>
+        <circle cx="9.6" cy="26" r="2.3" fill="currentColor"/>
+        <circle cx="9.6" cy="14" r="2.3" fill="currentColor"/>
+        <text x="46" y="26.5" font-family="Sora,sans-serif" font-size="18" font-weight="700" letter-spacing="-0.4" fill="currentColor">Chemvion <tspan font-weight="300" opacity="0.55">Solutions</tspan></text>
+      </svg>
     </div>
     <div class="footer-tagline">Certified · Renewable · Compliant</div>
   </div>
